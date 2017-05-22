@@ -1,0 +1,211 @@
+{
+  "playerCount": 3,
+  "isLoadingApp": false,
+  "undercutScoring": false,
+  "undercutWinnerId": null,
+  "undercutLoserId": null,
+  "dataSource": {
+    "_dataBlob": {
+      "s1": [
+        {
+          "id": 0,
+          "name": "Greg",
+          "balance": 0,
+          "active": true
+        },
+        {
+          "id": 1,
+          "name": "JM",
+          "balance": 0,
+          "active": true
+        },
+        {
+          "id": 2,
+          "name": "George",
+          "balance": 0,
+          "active": true
+        }
+      ]
+    },
+    "_dirtyRows": [
+      [
+        true,
+        true,
+        true
+      ]
+    ],
+    "_dirtySections": [
+      true
+    ],
+    "_cachedRowCount": 3,
+    "rowIdentities": [
+      [
+        "0",
+        "1",
+        "2"
+      ]
+    ],
+    "sectionIdentities": [
+      "s1"
+    ]
+  }
+}
+
+{
+  "playerCount": 3,
+  "isLoadingApp": false,
+  "undercutScoring": true,
+  "undercutWinnerId": null,
+  "undercutLoserId": null,
+  "dataSource": {
+    "_dataBlob": {
+      "s1": [
+        {
+          "id": 0,
+          "name": "Greg",
+          "balance": 0,
+          "active": true
+        },
+        {
+          "id": 1,
+          "name": "JM",
+          "balance": 0,
+          "active": true
+        },
+        {
+          "id": 2,
+          "name": "George",
+          "balance": 0,
+          "active": true
+        }
+      ]
+    },
+    "_dirtyRows": [
+      [
+        true,
+        true,
+        true
+      ]
+    ],
+    "_dirtySections": [
+      true
+    ],
+    "_cachedRowCount": 3,
+    "rowIdentities": [
+      [
+        "0",
+        "1",
+        "2"
+      ]
+    ],
+    "sectionIdentities": [
+      "s1"
+    ]
+  }
+}
+
+{
+  "playerCount": 3,
+  "isLoadingApp": false,
+  "undercutScoring": false,
+  "undercutWinnerId": null,
+  "undercutLoserId": null,
+  "dataSource": {
+    "_dataBlob": {
+      "s1": [
+        {
+          "id": 0,
+          "name": "Greg",
+          "balance": -1,
+          "active": true
+        },
+        {
+          "id": 1,
+          "name": "JM",
+          "balance": -1,
+          "active": true
+        },
+        {
+          "id": 2,
+          "name": "George",
+          "balance": 2,
+          "active": true
+        }
+      ]
+    },
+    "_dirtyRows": [
+      [
+        true,
+        true,
+        true
+      ]
+    ],
+    "_dirtySections": [
+      false
+    ],
+    "_cachedRowCount": 3,
+    "rowIdentities": [
+      [
+        "0",
+        "1",
+        "2"
+      ]
+    ],
+    "sectionIdentities": [
+      "s1"
+    ]
+  }
+}
+
+{
+  "playerCount": 3,
+  "isLoadingApp": false,
+  "undercutScoring": true,
+  "undercutWinnerId": null,
+  "undercutLoserId": null,
+  "dataSource": {
+    "_dataBlob": {
+      "s1": [
+        {
+          "id": 0,
+          "name": "Greg",
+          "balance": -1,
+          "active": true
+        },
+        {
+          "id": 1,
+          "name": "JM",
+          "balance": -1,
+          "active": true
+        },
+        {
+          "id": 2,
+          "name": "George",
+          "balance": 2,
+          "active": true
+        }
+      ]
+    },
+    "_dirtyRows": [
+      [
+        true,
+        true,
+        true
+      ]
+    ],
+    "_dirtySections": [
+      false
+    ],
+    "_cachedRowCount": 3,
+    "rowIdentities": [
+      [
+        "0",
+        "1",
+        "2"
+      ]
+    ],
+    "sectionIdentities": [
+      "s1"
+    ]
+  }
+}

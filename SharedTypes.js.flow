@@ -1,0 +1,22 @@
+/**
+ * @providesModule SharedTypes
+ * @flow
+ */
+
+export type AppData = {
+  module_name: string,
+  build_name: string,
+  view_count: number,
+  url_token: string,
+  creator?: {
+    avatar_url: string,
+    username: string,
+  },
+
+export type Player = {
+  name: string,
+  balance: number,
+  active: boolean,  // this is probably a state value, not persisted, also undercutLoser & undercutWinner
+},
+
+};

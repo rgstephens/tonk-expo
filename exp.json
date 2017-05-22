@@ -1,0 +1,24 @@
+{
+  "name": "Tonk Scorecard",
+  "description": "Explore apps written on rnplay.org",
+  "slug": "rnplay",
+  "sdkVersion": "12.0.0",
+  "version": "4.0.0",
+  "orientation": "portrait",
+  "primaryColor": "#5a2096",
+  "androidHideExponentNotificationInShellApp": true,
+  "iconUrl": "https://s3.amazonaws.com/exp-us-standard/rnplay/app-icon.png",
+  "loading": {
+    "iconUrl": "https://s3.amazonaws.com/exp-us-standard/rnplay/splash-icon.png"
+  },
+  "packagerOpts": {
+    "assetExts": ["ttf"]
+  },
+  "scheme": "rnplay",
+  "ios": {
+    "bundleIdentifier": "org.rnplay.playground"
+  },
+  "android": {
+    "package": "org.rnplay.playground"
+  }
+}
