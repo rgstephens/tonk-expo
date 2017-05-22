@@ -16,11 +16,13 @@ export default defineActionConstants([
   'BET_INCREASE',
   'BET_DECREASE',
   'SET_BET',
+  'SET_GAME',
+
+  'OPEN_APP',
 
   'ADD_APP_TO_HISTORY',
   'BECOME_GUEST',
   'HIDE_GLOBAL_LOADING',
-  'OPEN_APP',
   'SET_CURRENT_USER',
   'SET_HISTORY',
   'SHOW_GLOBAL_LOADING',

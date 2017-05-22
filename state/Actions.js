@@ -65,6 +65,13 @@ export default class Actions {
     };
   }
 
+  static setGame(game) {
+    return {
+      type: ActionTypes.SET_GAME,
+      game,
+    };
+  }
+
   static addPlayer(player) {
     return {
       type: ActionTypes.ADD_PLAYER,

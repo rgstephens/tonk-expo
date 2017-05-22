@@ -16,7 +16,7 @@ import ScorecardListView from '../components/ScorecardListView';
 @connect(data => ScorecardScreen.getDataProps)
 export default class ScorecardScreen extends React.Component {
   static getDataProps(data) {
-    console.log('ScorecardScreen/getDataProps data.game: ' + JSON.stringify(data.game));
+    //console.log('ScorecardScreen/getDataProps data.game: ' + JSON.stringify(data.game));
     return {
       game: data.game,
     };
@@ -34,14 +34,14 @@ export default class ScorecardScreen extends React.Component {
   };
 
   render() {
-    console.log('ScorecardScreen/render, this.props.game: ' + JSON.stringify(this.props.game));
+    //console.log('ScorecardScreen/render, this.props.game: ' + JSON.stringify(this.props.game));
     return <ScorecardListView game={this.props.game}  />;
   }
 }
 
 class PlusButton extends React.Component {
   render() {
-    console.log('ScorecardScreen/PlusButton');
+    //console.log('ScorecardScreen/PlusButton');
     return (
       <TouchableOpacity
         style={{

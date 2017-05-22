@@ -163,10 +163,12 @@ class App extends React.Component {
   };
 
   async _bootstrap() {
+    console.log('main.js/_bootstrap');
     try {
       let fetchUser = LocalStorage.getUserAsync();
       let fetchHistory = LocalStorage.getHistoryAsync();
       let fetchPlayer = LocalStorage.getPlayerAsync();
+      let fetchGame = LocalStorage.getGameAsync();
 
       let fontAssets = cacheFonts([
         Platform.OS === 'ios' ? Ionicons.font : MaterialIcons.font,
@@ -183,7 +185,8 @@ class App extends React.Component {
         require('./assets/images/exponent-icon.png'),
       ]);
 
-      let [user, history, player, ...rest] = await Promise.all([
+      let [game, user, history, player, ...rest] = await Promise.all([
+        fetchGame,
         fetchUser,
         fetchHistory,
         fetchPlayer,
@@ -191,15 +194,7 @@ class App extends React.Component {
         ...imageAssets,
       ]);
 
-      if (!player) {
-        //console.log('main.js, initializing player to Greg');
-        //player = [{ id: 0, name: 'Greg', balance: 0, active: true }];
-        //this.props.dispatch(Actions.addPlayer(player));
-        //LocalStorage.savePlayerAsync(player);
-        //const { player } = this.props.getState();
-        //LocalStorage.savePlayerAsync(player);
-      }
-      //console.log('main.js, player: ' + JSON.stringify(player) + ', history: ' + JSON.stringify(history));
+      game && this.props.dispatch(Actions.setGame(game));
       user && this.props.dispatch(Actions.setCurrentUser(user));
       history && this.props.dispatch(Actions.setHistory(history));
       player && this.props.dispatch(Actions.setPlayer(player));

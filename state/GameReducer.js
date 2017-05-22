@@ -3,6 +3,7 @@
  */
 
 import ActionTypes from 'ActionTypes';
+import LocalStorage from 'LocalStorage';
 
 const initialState = {
   players: [
@@ -23,11 +24,16 @@ class GameReducer {
     }
   }
 
+  static [ActionTypes.SET_GAME](state, action) {
+    return action.game;
+  }
+
   static [ActionTypes.ADD_PLAYER](state, action) {
     // action.id, action.name
     console.log('ADD_PLAYER');
     //console.log('state: ' + JSON.stringify(state));
     const players = [ ...state.players.slice(), {id: state.players.length, name: '', balance: 0, active: true, won: 0, lost: 0, rowchange: 0}];
+    LocalStorage.saveGameAsync({...state, players});
     return {...state, players};
   }
 
@@ -47,11 +53,8 @@ class GameReducer {
         ...item,
       };
     });
+    LocalStorage.saveGameAsync({...state, players});
     return {...state, players};
-  }
-
-  static [ActionTypes.ADD_APP_TO_PLAYER](state, action) {
-    return [...state, action.app];
   }
 
   static [ActionTypes.TOGGLE_ACTIVE](state, action) {
@@ -73,8 +76,8 @@ class GameReducer {
         active: !item.active
       };
     });
+    LocalStorage.saveGameAsync({...state, players});
     return {...state, players};
-    //return [...state, action.id];
   }
 
   static [ActionTypes.WON](state, action) {
@@ -106,7 +109,7 @@ class GameReducer {
         won: item.won + 1
       };
     });
-    //console.log('returning players: ' + JSON.stringify(players));
+    LocalStorage.saveGameAsync({...state, players});
     return {...state, players};
   }
 
@@ -123,17 +126,20 @@ class GameReducer {
 
   static [ActionTypes.BET_INCREASE](state, action) {
     console.log('BET_INCREASE');
+    LocalStorage.saveGameAsync({...state, stakes: state.stakes + 1});
     return {...state, stakes: state.stakes + 1};
   }
 
   static [ActionTypes.BET_DECREASE](state, action) {
     console.log('BET_DECREASE');
+    LocalStorage.saveGameAsync({...state, stakes: state.stakes - 1});
     return {...state, stakes: state.stakes - 1};
   }
 
   static [ActionTypes.SET_BET](state, action) {
     // action.amount
     console.log('BET_DECREASE, action: ' + JSON.stringify(action));
+    LocalStorage.saveGameAsync({...state, stakes: parseInt(action.amount)});
     return {...state, stakes: parseInt(action.amount)};
   }
 
@@ -147,11 +153,13 @@ class GameReducer {
         lost: 0
       };
     });
+    LocalStorage.saveGameAsync({...state, players});
     return {...state, players};
   }
 
   static [ActionTypes.RESET_GAME](state, action) {
     console.log('RESET_GAME');
+    LocalStorage.saveGameAsync(initialState);
     return initialState;
   }
 
@@ -161,11 +169,6 @@ class GameReducer {
     console.log('state: ' + JSON.stringify(state));
     const numActive = state.players.filter((player) => player.active).length;
     const winLossAmount = (state.stakes * (numActive - 1) * 2);
-/*
-    let players = Object.assign({}, state.players);
-    players[action.winnerId].balance = players[action.winnerId].balance + winLossAmount;
-    players[action.loserId].balance = players[action.loserId].balance - winLossAmount;
-*/
     let players = state.players.map((item, index) => {
       if (index == action.loserId) {
         return {
@@ -189,10 +192,8 @@ class GameReducer {
     console.log('>> state after update: ' + JSON.stringify(state));
     console.log('>> updated Players: ' + JSON.stringify(players));
 
-    return {
-      ...state,
-      players
-    };
+    LocalStorage.saveGameAsync({...state, players});
+    return { ...state, players };
   }
 
   static [ActionTypes.RESET](state, action) {

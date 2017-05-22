@@ -8,6 +8,8 @@ import { AsyncStorage } from 'react-native';
 const Keys = {
   User: 'PlaygroundUser',
   History: 'PlaygroundHistory',
+  Game: 'Game',
+  Tricks: 'Tricks',
 };
 
 async function getUserAsync() {
@@ -68,6 +70,27 @@ async function clearHistoryAsync() {
   return AsyncStorage.removeItem(Keys.History);
 }
 
+async function getGameAsync() {
+  let results = await AsyncStorage.getItem(Keys.Game);
+  console.log('LocalStorage/getGameAsync: ' + results);
+
+  try {
+    let game = JSON.parse(results);
+    return game;
+  } catch (e) {
+    return null;
+  }
+}
+
+async function saveGameAsync(game: Object) {
+  console.log('LocalStorage/saveGameAsync: ' + JSON.stringify(game));
+  return AsyncStorage.setItem(Keys.Game, JSON.stringify(game));
+}
+
+async function clearGameAsync() {
+  return AsyncStorage.removeItem(Keys.Game);
+}
+
 async function clearAll() {
   return AsyncStorage.clear();
 }
@@ -82,5 +105,8 @@ export default {
   getHistoryAsync,
   saveHistoryAsync,
   clearHistoryAsync,
+  getGameAsync,
+  saveGameAsync,
+  clearGameAsync,
   clearAll,
 };

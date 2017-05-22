@@ -90,11 +90,11 @@ export default class ScorecardListView extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log('ScorecardListView/componentWillReceiveProps');
-    console.log('ScorecardListView/componentWillReceiveProps, this.props: ' + JSON.stringify(this.props.game));
-    console.log('ScorecardListView/componentWillReceiveProps, nextProps: ' + JSON.stringify(nextProps.game));
+    //console.log('ScorecardListView/componentWillReceiveProps');
+    //console.log('ScorecardListView/componentWillReceiveProps, this.props: ' + JSON.stringify(this.props.game));
+    //console.log('ScorecardListView/componentWillReceiveProps, nextProps: ' + JSON.stringify(nextProps.game));
     if (nextProps.game !== this.props.game) {
-      console.log('ScorecardListView/componentsWillReceiveProps **players changed** updating datasource');
+      //console.log('ScorecardListView/componentsWillReceiveProps **players changed** updating datasource');
       this.setState({
         dataSource: this.state.dataSource.cloneWithRows(nextProps.game.players),
       });
@@ -115,7 +115,6 @@ export default class ScorecardListView extends React.Component {
   handleUndercut = (win, loss) => {
     //console.log('ScorecardListView/handleundercut, win: ' + JSON.stringify(win));
     if (win != null) {
-      console.log('**set undercut winner');
       this.setState({undercutWinnerId: win});
       if (this.state.undercutLoserId) {
         this.postUndercut(win, this.state.undercutLoserId);
@@ -124,7 +123,6 @@ export default class ScorecardListView extends React.Component {
         this.forceUpdate();
       }
     } else if (loss != null) {
-      console.log('**set undercut loser');
       this.setState({undercutLoserId: loss});
       if (this.state.undercutWinnerId) {
         this.postUndercut(this.state.undercutWinnerId, loss);
@@ -132,7 +130,6 @@ export default class ScorecardListView extends React.Component {
         this.setState({undercutScoring: false, undercutWinnerId: null, undercutLoserId: null});
       }
     } else {
-      console.log('**toggle undercut, current value: ' + this.state.undercutScoring);
       // changing this.state.undercutScoring should cause ListView to re-render but it isn't working
       this.setState({undercutScoring: !this.state.undercutScoring, undercutWinnerId: null, undercutLoserId: null});
       // dispatch this to force property update
@@ -148,7 +145,7 @@ export default class ScorecardListView extends React.Component {
 */
 
   render() {
-    console.log('ScorecardListview/render this.state: ' + JSON.stringify(this.state));
+    //console.log('ScorecardListview/render this.state: ' + JSON.stringify(this.state));
     //console.log('rowCount: ' + this.state.dataSource.getRowCount());
     if (this.state.dataSource.getRowCount() > 0) {
       const undercutScoring = this.state.undercutScoring;
@@ -181,6 +178,7 @@ export default class ScorecardListView extends React.Component {
           <View style={{backgroundColor: 'white', height: 100, flexDirection: 'row', justifyContent: 'space-between'}}>
             {/* Rest of the app comes ABOVE the action button component !*/}
             <ActionButton buttonColor="#1abc9c" buttonTextStyle={styles.btnText} position="left" buttonText={'$' + this.props.game.stakes.toString()}>
+{/*
               <ActionButton.Item buttonColor='#1abc9c' title="Enter Bet" onPress={() => this.props.dispatch(Actions.betIncrease()) }>
                 <TextInput style={styles.btnText} selectTextOnFocus={true}
                            autoCorrect={false}
@@ -188,6 +186,7 @@ export default class ScorecardListView extends React.Component {
                            onChangeText={(amount) => this.props.dispatch(Actions.setBet(amount))}
                 />
               </ActionButton.Item>
+*/}
               <ActionButton.Item buttonColor='#1abc9c' title="Increase Bet" onPress={() => this.props.dispatch(Actions.betIncrease()) }>
                 <Ionicons name="ios-arrow-up" size={24} color="white" />
               </ActionButton.Item>

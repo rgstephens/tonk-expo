@@ -212,7 +212,9 @@ var styles = StyleSheet.create({
   buttonRowStyle: {
     flex: 1,
     flexDirection: 'row',
-    padding: 10 // TextView padding not handled well on Android https://github.com/facebook/react-native/issues/3233
+    padding: 10, // TextView padding not handled well on Android https://github.com/facebook/react-native/issues/3233
+    paddingTop: 5,
+    height: 50
   },
 
   // child of
@@ -380,14 +382,14 @@ export default class PlayerCard extends React.Component {
   }
 
   componentWillReceiveProps(nextProps: Props) {
-    console.log('PlayerCard/componentWillReceiveProps');
+    //console.log('PlayerCard/componentWillReceiveProps');
     //console.log('  undercut values: ' + this.props.undercutScoring + ' to ' + nextProps.undercutScoring);
     //console.log('nextProps.balance: ' + JSON.stringify(nextProps.balance));
     //console.log('this.props.balance: ' + JSON.stringify(this.props.balance));
     if (nextProps !== this.props) {
       //console.log('>> Properties changed, setState');
-      console.log('>> oldProps: ' + JSON.stringify(this.props, ["id","name","balance","active","rowchange","undercutScoring","undercutWinner","undercutLoser"]));
-      console.log('>> newProps: ' + JSON.stringify(nextProps, ["id","name","balance","active","rowchange","undercutScoring","undercutWinner","undercutLoser"]));
+      //console.log('>> oldProps: ' + JSON.stringify(this.props, ["id","name","balance","active","rowchange","undercutScoring","undercutWinner","undercutLoser"]));
+      //console.log('>> newProps: ' + JSON.stringify(nextProps, ["id","name","balance","active","rowchange","undercutScoring","undercutWinner","undercutLoser"]));
       this.setState({ ...nextProps });
     }
   }
