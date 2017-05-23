@@ -163,6 +163,7 @@ var styles = StyleSheet.create({
     shadowOpacity: .7,
     shadowColor: 'black',
     elevation: 2,
+    borderColor: 'transparent'
   },
   balanceButton: {
     alignSelf: 'flex-end',
@@ -176,7 +177,8 @@ var styles = StyleSheet.create({
     shadowRadius: 2,
     shadowOpacity: .7,
     shadowColor: 'black',
-    elevation: 2
+    elevation: 2,
+    borderColor: 'transparent'
   },
   colorPlus: {
     backgroundColor: Colors.mediumAquamarine,
@@ -214,7 +216,8 @@ var styles = StyleSheet.create({
     flexDirection: 'row',
     padding: 10, // TextView padding not handled well on Android https://github.com/facebook/react-native/issues/3233
     paddingTop: 5,
-    height: 50
+    height: 50,
+    backgroundColor: 'transparent'
   },
 
   // child of
@@ -232,12 +235,14 @@ var styles = StyleSheet.create({
     borderRadius: 3,
     paddingLeft: 5,
     paddingRight: 5,
-    paddingVertical: 2
+    paddingVertical: 2,
+    backgroundColor: 'transparent',
+    color: 'transparent'
   },
 
   // child of buttonStyle
   buttonOn: {
-    backgroundColor: Colors.background
+    backgroundColor: Colors.buttonBackground
   },
 
   // child of buttonStyle
@@ -430,7 +435,7 @@ export default class PlayerCard extends React.Component {
                        onChangeText={(name) => this.props.dispatch(Actions.setName(this.state.id, name))}
             />
             <MKButton
-              style={[styles.winLossButton]}>
+              style={[styles.winLossButton]} >
               <Text
                 style={styles.winLoss}>{this.state.won}-{this.state.lost}</Text>
             </MKButton>

@@ -31,26 +31,6 @@ async function removeUserAsync() {
   return AsyncStorage.removeItem(Keys.User);
 }
 
-async function getPlayerAsync() {
-  let results = await AsyncStorage.getItem(Keys.Player);
-
-  try {
-    let player = JSON.parse(results);
-    return player;
-  } catch (e) {
-    return null;
-  }
-}
-
-async function savePlayerAsync(player: Array<any>) {
-  console.log('savePlayerAsync: ' + JSON.stringify(player));
-  return AsyncStorage.setItem(Keys.Player, JSON.stringify(player));
-}
-
-async function removePlayerAsync() {
-  return AsyncStorage.removeItem(Keys.Player);
-}
-
 async function getHistoryAsync() {
   let results = await AsyncStorage.getItem(Keys.History);
 
@@ -72,7 +52,7 @@ async function clearHistoryAsync() {
 
 async function getGameAsync() {
   let results = await AsyncStorage.getItem(Keys.Game);
-  console.log('LocalStorage/getGameAsync: ' + results);
+  //console.log('LocalStorage/getGameAsync: ' + results);
 
   try {
     let game = JSON.parse(results);
@@ -99,9 +79,6 @@ export default {
   saveUserAsync,
   getUserAsync,
   removeUserAsync,
-  savePlayerAsync,
-  getPlayerAsync,
-  removePlayerAsync,
   getHistoryAsync,
   saveHistoryAsync,
   clearHistoryAsync,

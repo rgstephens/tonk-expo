@@ -175,7 +175,7 @@ export default class ScorecardListView extends React.Component {
                     onEndReached={this.props.onEndReached}
           />
           {this.state.isLoadingApp && this._renderLoading()}
-          <View style={{backgroundColor: 'white', height: 100, flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View style={styles.actionView}>
             {/* Rest of the app comes ABOVE the action button component !*/}
             <ActionButton buttonColor="#1abc9c" buttonTextStyle={styles.btnText} position="left" buttonText={'$' + this.props.game.stakes.toString()}>
 {/*
@@ -648,4 +648,12 @@ var styles = StyleSheet.create({
   buttonText: {
     color: 'white'
   },
+
+  actionView: {
+    backgroundColor: 'white',
+    height: (Platform.OS === 'ios') ? 100 : 100,
+    paddingTop: 0,
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  }
 });

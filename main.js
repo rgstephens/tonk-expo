@@ -140,8 +140,11 @@ class App extends React.Component {
 
     return (
       <View style={styles.container}>
+{/*
         {Platform.OS === 'ios' && <StatusBar barStyle="light-content" />}
         {Platform.OS === 'android' && <View style={styles.statusBarUnderlay} />}
+*/}
+        <StatusBar barStyle="light-content" />
 
         <StackNavigation
           id="root"
@@ -167,7 +170,7 @@ class App extends React.Component {
     try {
       let fetchUser = LocalStorage.getUserAsync();
       let fetchHistory = LocalStorage.getHistoryAsync();
-      let fetchPlayer = LocalStorage.getPlayerAsync();
+      //let fetchPlayer = LocalStorage.getPlayerAsync();
       let fetchGame = LocalStorage.getGameAsync();
 
       let fontAssets = cacheFonts([
@@ -189,7 +192,6 @@ class App extends React.Component {
         fetchGame,
         fetchUser,
         fetchHistory,
-        fetchPlayer,
         ...fontAssets,
         ...imageAssets,
       ]);
@@ -197,7 +199,6 @@ class App extends React.Component {
       game && this.props.dispatch(Actions.setGame(game));
       user && this.props.dispatch(Actions.setCurrentUser(user));
       history && this.props.dispatch(Actions.setHistory(history));
-      player && this.props.dispatch(Actions.setPlayer(player));
       this.setState({ bootstrapIsComplete: true });
     } catch (e) {
       Alert.alert('Error on bootstrap!', e.message);

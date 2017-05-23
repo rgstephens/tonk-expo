@@ -7,7 +7,7 @@ import { Dimensions, Platform, NativeModules } from 'react-native';
 
 const { ExponentConstants } = NativeModules;
 
-const useDrawerNavigation = Platform.OS === 'android';
+const useDrawerNavigation = Platform.OS === 'androidX';
 // const useDrawerNavigation = false;
 
 export default {
