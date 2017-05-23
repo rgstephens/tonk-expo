@@ -8,3 +8,6 @@ node_modules/
 temp.js
 temp.json
 *.apk
+/.eslintrc.js
+/.eslintignore
+/temp.js
