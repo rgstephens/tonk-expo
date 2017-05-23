@@ -1,15 +1,16 @@
 {
   "name": "Tonk Scorecard",
   "description": "Scorecard for the Tonk card game",
+  "privacy": "public",
   "slug": "tonk",
   "sdkVersion": "12.0.0",
-  "version": "0.2",
+  "version": "0.3",
   "orientation": "portrait",
   "primaryColor": "#5a2096",
   "androidHideExponentNotificationInShellApp": true,
-  "iconUrl": "https://s3.amazonaws.com/exp-us-standard/rnplay/app-icon.png",
+  "iconUrl": "http://gstephens.org/cards167x167.png",
   "loading": {
-    "iconUrl": "assets/images/cards.png"
+    "iconUrl": "http://gstephens.org/cards.png"
   },
   "packagerOpts": {
     "assetExts": ["ttf"]

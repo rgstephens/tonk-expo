@@ -56,8 +56,6 @@ type State = {
   dataSource: ListView.DataSource,
 };
 
-let i = 0;
-
 @connect()
 @withNavigation
 export default class ScorecardListView extends React.Component {
@@ -157,6 +155,7 @@ export default class ScorecardListView extends React.Component {
       //console.log('ScorecardListView/render, numActive: ' + numActive);
       return (
         <View style={{ flex: 1 }}>
+        <View style={styles.scrollView}>
           <ListView dataSource={this.state.dataSource}
                     style={{ flex: 1 }}
                     renderRow={(row, sectionID, rowID, highlightRow) =>
@@ -174,10 +173,10 @@ export default class ScorecardListView extends React.Component {
                     onEndReachedThreshold={1200}
                     onEndReached={this.props.onEndReached}
           />
+          </View>
           {this.state.isLoadingApp && this._renderLoading()}
-          <View style={styles.actionView}>
             {/* Rest of the app comes ABOVE the action button component !*/}
-            <ActionButton buttonColor="#1abc9c" buttonTextStyle={styles.btnText} position="left" buttonText={'$' + this.props.game.stakes.toString()}>
+            <ActionButton buttonColor="#1abc9c" spacing={15} buttonTextStyle={styles.actionButtonMain} position="left" buttonText={'$' + this.props.game.stakes.toString()}>
 {/*
               <ActionButton.Item buttonColor='#1abc9c' title="Enter Bet" onPress={() => this.props.dispatch(Actions.betIncrease()) }>
                 <TextInput style={styles.btnText} selectTextOnFocus={true}
@@ -194,7 +193,8 @@ export default class ScorecardListView extends React.Component {
                 <Ionicons name="ios-arrow-down" size={24} color="white" />
               </ActionButton.Item>
             </ActionButton>
-            <ActionButton buttonColor="#3498db" style={{}}>
+
+            <ActionButton buttonColor="#3498db" spacing={15} buttonTextStyle={styles.actionButtonMain}>
               <ActionButton.Item buttonColor='rgba(231,76,60,1)' title="Reset Scores" onPress={() => this.props.dispatch(Actions.resetScores()) }>
                 <Foundation name="dollar" size={24} color="white" style={styles.actionButtonIcon} />
               </ActionButton.Item>
@@ -207,7 +207,6 @@ export default class ScorecardListView extends React.Component {
                 </ActionButton.Item>
                 : '' }
             </ActionButton>
-          </View>
         </View>
       );
     } else {
@@ -488,6 +487,16 @@ var styles = StyleSheet.create({
     color: 'white'
   },
 
+  actionButtonMain: {
+    fontSize: 18,
+    backgroundColor: 'transparent',
+    textAlign: 'center',
+    color: 'white',
+  },
+
+  actionButton: {
+  },
+
   containerOrig: {
     flex: 1,
     marginTop: Metrics.navBarHeight,
@@ -655,5 +664,9 @@ var styles = StyleSheet.create({
     paddingTop: 0,
     flexDirection: 'row',
     justifyContent: 'space-between'
+  },
+
+  scrollView: {
+    height: height - 230,
   }
 });

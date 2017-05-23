@@ -22,32 +22,10 @@ import { BoldText, RegularText } from 'StyledText';
 import Router from 'Router';
 
 @connect()
-class SettingsButton extends React.Component {
-  render() {
-    return (
-      <TouchableOpacity
-        style={{
-          flex: 1,
-          alignItems: 'center',
-          justifyContent: 'center',
-          marginRight: 15,
-        }}
-        onPress={() => this.props.dispatch(Actions.signOut())}>
-        <RegularText style={{ color: '#fff' }}>Sign Out</RegularText>
-      </TouchableOpacity>
-    );
-  }
-}
-
 export default class AboutScreen extends React.Component {
   static route = {
     navigationBar: {
       title: 'About',
-      renderRight() {
-        if (Platform.OS === 'ios') {
-          return <SettingsButton />;
-        }
-      },
     },
   };
 
@@ -86,6 +64,20 @@ export default class AboutScreen extends React.Component {
         </RegularText>
 
         <BoldText style={styles.title}>
+          Author
+        </BoldText>
+        <RegularText style={styles.text}>
+          Greg Stephens - greg@udon.org
+        </RegularText>
+
+        <BoldText style={styles.title}>
+          Version
+        </BoldText>
+        <RegularText style={styles.text}>
+          0.3
+        </RegularText>
+
+        <BoldText style={styles.title}>
           Powered by React Native & Expo
         </BoldText>
         <RegularText style={styles.text}>
@@ -94,13 +86,6 @@ export default class AboutScreen extends React.Component {
           <RegularText onPress={this._openExponentDocs} style={styles.linkText}>
             Read the docs for Expo here.
           </RegularText>
-        </RegularText>
-
-        <BoldText style={styles.title}>
-          Author
-        </BoldText>
-        <RegularText style={styles.text}>
-          Greg Stephens - greg@udon.org
         </RegularText>
 
       </ScrollView>

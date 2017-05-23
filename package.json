@@ -1,8 +1,8 @@
 {
-  "name": "rnplay",
+  "name": "tonk",
   "main": "main.js",
-  "description": "React Native Playground Exponent app",
-  "repository": "https://github.com/exponentjs/rnplay",
+  "description": "Tonk Scorecard",
+  "repository": "https://github.com/rgstephens/tonk",
   "license": "BSD-2-Clause",
   "scripts": {
     "lint": "eslint . --fix || true",

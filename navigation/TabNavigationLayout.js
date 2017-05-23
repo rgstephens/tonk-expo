@@ -44,6 +44,7 @@ export default class TabNavigationLayout extends React.Component {
           />
         </TabNavigationItem>
 
+{/*
         <TabNavigationItem
           id="history"
           renderIcon={isSelected =>
@@ -53,6 +54,7 @@ export default class TabNavigationLayout extends React.Component {
             initialRoute={Router.getRoute('history')}
           />
         </TabNavigationItem>
+*/}
 
         <TabNavigationItem
           id="about"

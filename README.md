@@ -1,9 +1,8 @@
 #  TonkScorecard
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
 Scorecard for [Tonk](https://en.wikipedia.org/wiki/Tonk_(card_game)).
 
-* Standard compliant React Native App Utilizing [Ignite](https://github.com/infinitered/ignite)
+* React Native App using [expo](https://expo.io)
 
 ## :arrow_up: How to Setup
 
@@ -35,7 +34,6 @@ and other sensitive information in a `.env` file:
 
 ```
 API_URL=https://myapi.com
-GOOGLE_MAPS_API_KEY=abcdefgh
 ```
 
 and access them from React Native like so:
@@ -44,13 +42,9 @@ and access them from React Native like so:
 import Secrets from 'react-native-config'
 
 Secrets.API_URL  // 'https://myapi.com'
-Secrets.GOOGLE_MAPS_API_KEY  // 'abcdefgh'
 ```
 
 The `.env` file is ignored by git keeping those secrets out of your repo.
-
-## :open_file_folder: Related Articles
-Ignite Documentation - [Ignite Wiki https://github.com/infinitered/ignite/wiki](https://github.com/infinitered/ignite/wiki)
 
 ## AppStore Info
 
