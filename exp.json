@@ -17,9 +17,10 @@
   },
   "scheme": "tonk",
   "ios": {
-    "bundleIdentifier": "org.gregstephens.tonk"
+    "bundleIdentifier": "com.gregstephens.tonk"
   },
   "android": {
-    "package": "org.gregstephens.tonk"
+    "package": "com.gregstephens.tonk",
+    "versionCode": "2"
   }
 }

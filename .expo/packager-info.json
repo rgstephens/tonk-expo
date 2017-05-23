@@ -1,8 +1,8 @@
 {
-  "expoServerPort": 19000,
-  "packagerPort": 19004,
-  "packagerPid": 8688,
-  "expoServerNgrokUrl": "https://ci-cub.stephens.rnplay.exp.direct",
-  "packagerNgrokUrl": "https://packager.ci-cub.stephens.rnplay.exp.direct",
-  "ngrokPid": 8702
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }
