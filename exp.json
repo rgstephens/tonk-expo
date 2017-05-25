@@ -3,11 +3,11 @@
   "description": "Scorecard for the Tonk card game",
   "privacy": "public",
   "slug": "tonk",
-  "sdkVersion": "14.0.0",
+  "sdkVersion": "15.0.0",
   "version": "0.3",
   "orientation": "portrait",
   "primaryColor": "#5a2096",
-  "androidHideExponentNotificationInShellApp": true,
+  //"androidHideExponentNotificationInShellApp": true,
   "icon": "http://gstephens.org/cards167x167.png",
   "loading": {
     "icon": "http://gstephens.org/cards.png"
