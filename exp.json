@@ -3,7 +3,7 @@
   "description": "Scorecard for the Tonk card game",
   "privacy": "public",
   "slug": "tonk",
-  "sdkVersion": "16.0.0",
+  "sdkVersion": "17.0.0",
   "version": "0.3",
   "orientation": "portrait",
   "primaryColor": "#5a2096",
