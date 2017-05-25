@@ -18,7 +18,7 @@ import {
   View,
 } from 'react-native';
 import TouchableNativeFeedbackSafe
-  from '@exponent/react-native-touchable-native-feedback-safe';
+  from '@expo/react-native-touchable-native-feedback-safe';
 
 import Actions from 'Actions';
 import Alerts from 'Alerts';
@@ -29,7 +29,7 @@ import LocalStorage from 'LocalStorage';
 import PlaygroundStore from 'PlaygroundStore';
 import StyledTextInput from 'StyledTextInput';
 import isValidEmail from 'isValidEmail';
-import { Components } from 'exponent';
+import { Components } from 'expo';
 import { RegularText } from 'StyledText';
 import { connect } from 'react-redux';
 

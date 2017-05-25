@@ -4,7 +4,7 @@
  */
 
 import type { EffectParams } from 'redux-effex';
-import { Notifications, Permissions } from 'exponent';
+import { Notifications, Permissions } from 'expo';
 
 import Actions from 'Actions';
 import PlaygroundRestApi from 'PlaygroundRestApi';

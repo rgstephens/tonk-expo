@@ -4,7 +4,7 @@
  */
 
 import { connect } from 'react-redux';
-import { withNavigation } from '@exponent/ex-navigation';
+import { withNavigation } from '@expo/ex-navigation';
 import React, { PropTypes } from 'react';
 import { View, Text, TextInput, ListView, Image, Button, KeyboardAvoidingView, StyleSheet, TouchableHighlight, PixelRatio } from 'react-native';
 import { getTheme, setTheme, MKButton, MKColor } from 'react-native-material-kit';

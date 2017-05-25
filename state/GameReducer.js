@@ -132,8 +132,12 @@ class GameReducer {
 
   static [ActionTypes.BET_DECREASE](state, action) {
     console.log('BET_DECREASE');
-    LocalStorage.saveGameAsync({...state, stakes: state.stakes - 1});
-    return {...state, stakes: state.stakes - 1};
+    if (state.stakes > 1) {
+      LocalStorage.saveGameAsync({...state, stakes: state.stakes - 1});
+      return {...state, stakes: state.stakes - 1};
+    } else {
+      return {...state}
+    }
   }
 
   static [ActionTypes.SET_BET](state, action) {

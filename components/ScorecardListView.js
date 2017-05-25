@@ -27,12 +27,12 @@ import {
 
 import { MKColor, getTheme, setTheme, MKButton } from 'react-native-material-kit';
 import ActionButton from 'react-native-action-button';
-import { Ionicons, Foundation } from '@exponent/vector-icons';
+import { Ionicons, Foundation } from '@expo/vector-icons';
 
 const { ExponentUtil } = NativeModules;
 
 import { connect } from 'react-redux';
-import { withNavigation } from '@exponent/ex-navigation';
+import { withNavigation } from '@expo/ex-navigation';
 import PlayerCard from 'PlayerCard';
 
 import Actions from 'Actions';

@@ -9,15 +9,15 @@ import {
   StackNavigation,
   DrawerNavigation,
   DrawerNavigationItem,
-} from '@exponent/ex-navigation';
-import { MaterialIcons } from '@exponent/vector-icons';
+} from '@expo/ex-navigation';
+import { MaterialIcons } from '@expo/vector-icons';
 
 import { connect } from 'react-redux';
 
 import Actions from 'Actions';
 import Colors from 'Colors';
 import Router from 'Router';
-import { Font } from 'exponent';
+import { Font } from 'expo';
 import { RegularText } from 'StyledText';
 
 const defaultRouteConfig = {

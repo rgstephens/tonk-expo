@@ -9,9 +9,9 @@ import {
   StackNavigation,
   TabNavigation,
   TabNavigationItem,
-} from '@exponent/ex-navigation';
-import { Ionicons } from '@exponent/vector-icons';
-import { Font } from 'exponent';
+} from '@expo/ex-navigation';
+import { Ionicons } from '@expo/vector-icons';
+import { Font } from 'expo';
 
 import Colors from 'Colors';
 import Router from 'Router';

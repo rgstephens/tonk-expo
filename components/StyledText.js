@@ -6,7 +6,7 @@
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 
-import { Font } from 'exponent';
+import { Font } from 'expo';
 
 export class LightText extends React.Component {
   render() {

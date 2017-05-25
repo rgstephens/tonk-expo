@@ -3,7 +3,7 @@
  * @flow
  */
 
-import { Constants } from 'exponent';
+import { Constants } from 'expo';
 
 type RequestBody = ?(string | Object);
 

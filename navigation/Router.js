@@ -3,7 +3,7 @@
  * @flow
  */
 
-import { createRouter } from '@exponent/ex-navigation';
+import { createRouter } from '@expo/ex-navigation';
 
 import ExploreScreen from 'ExploreScreen';
 import MyAppsScreen from 'MyAppsScreen';

@@ -21,7 +21,7 @@ import {
 const { ExponentUtil } = NativeModules;
 
 import { connect } from 'react-redux';
-import { withNavigation } from '@exponent/ex-navigation';
+import { withNavigation } from '@expo/ex-navigation';
 
 import Actions from 'Actions';
 import AppDataApi from 'AppDataApi';

@@ -1,4 +1,4 @@
-import { Asset, Font } from 'exponent';
+import { Asset, Font } from 'expo';
 
 export function cacheImages(images) {
   return images.map(image => Asset.fromModule(image).downloadAsync());

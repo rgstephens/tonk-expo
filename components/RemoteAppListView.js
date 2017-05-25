@@ -16,7 +16,7 @@ import {
 const { ExponentUtil } = NativeModules;
 
 import { connect } from 'react-redux';
-import { withNavigation } from '@exponent/ex-navigation';
+import { withNavigation } from '@expo/ex-navigation';
 
 import AppDataApi from 'AppDataApi';
 import AppListView from 'AppListView';

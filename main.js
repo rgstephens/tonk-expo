@@ -3,7 +3,7 @@
  * @flow
  */
 
-import Exponent, { Components } from 'exponent';
+import Expo, { Components } from 'expo';
 import React from 'react';
 import {
   AppRegistry,
@@ -22,8 +22,8 @@ import {
   withNavigation,
   NavigationProvider,
   StackNavigation,
-} from '@exponent/ex-navigation';
-import { MaterialIcons, Ionicons } from '@exponent/vector-icons';
+} from '@expo/ex-navigation';
+import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 import { connect, Provider as ReduxProvider } from 'react-redux';
 import PlaygroundStore from 'PlaygroundStore';
 
@@ -103,7 +103,7 @@ class App extends React.Component {
 
     // Watch for push notifications while open
     DeviceEventEmitter.addListener(
-      'Exponent.notification',
+      'Expo.notification',
       this._handleNotification
     );
   }
@@ -240,4 +240,4 @@ const styles = StyleSheet.create({
   },
 });
 
-Exponent.registerRootComponent(AppContainer);
+Expo.registerRootComponent(AppContainer);

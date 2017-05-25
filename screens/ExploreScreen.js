@@ -14,7 +14,7 @@ import { RegularText } from 'StyledText';
 import {
   SlidingTabNavigation,
   SlidingTabNavigationItem,
-} from '@exponent/ex-navigation';
+} from '@expo/ex-navigation';
 
 export default class ExploreScreen extends React.Component {
   static route = {

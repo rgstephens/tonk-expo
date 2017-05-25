@@ -8,7 +8,7 @@ import { effectsMiddleware } from 'redux-effex';
 import {
   NavigationReducer,
   createNavigationEnabledStore,
-} from '@exponent/ex-navigation';
+} from '@expo/ex-navigation';
 
 import ApiStateReducer from 'ApiStateReducer';
 import CurrentUserReducer from 'CurrentUserReducer';
