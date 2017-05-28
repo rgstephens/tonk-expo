@@ -3,7 +3,7 @@
  * @flow
  */
 
-import Expo, { Components } from 'expo';
+import Expo from 'expo';
 import React from 'react';
 import {
   AppRegistry,
@@ -135,7 +135,7 @@ class App extends React.Component {
 
   render() {
     if (!this.state.bootstrapIsComplete) {
-      return <Components.AppLoading />;
+      return <Expo.AppLoading />;
     }
 
     return (

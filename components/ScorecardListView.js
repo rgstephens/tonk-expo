@@ -63,7 +63,7 @@ export default class ScorecardListView extends React.Component {
 
   constructor(props, context) {
     super(props, context);
-    //console.log('constructor props.game: ' + JSON.stringify(props.game));
+    console.log('ScorecardListView/constructor props.game.present: ' + JSON.stringify(props.game.present));
     //console.log('constructor props.undercutScoringXX: ' + JSON.stringify(props.undercutScoringXX));
 
     let dataSource = new ListView.DataSource({
@@ -71,13 +71,13 @@ export default class ScorecardListView extends React.Component {
     });
 
     if (props.game) {
-      dataSource = dataSource.cloneWithRows(props.game.players);
+      dataSource = dataSource.cloneWithRows(props.game.present.players);
     }
 
     this.handleUndercut = this.handleUndercut.bind(this);
 
     this.state = {
-      playerCount: props.game.players.length,
+      playerCount: props.game.present.players.length,
       isLoadingApp: false,
       undercutScoring: false,
       undercutWinnerId: null,
@@ -91,10 +91,10 @@ export default class ScorecardListView extends React.Component {
     //console.log('ScorecardListView/componentWillReceiveProps');
     //console.log('ScorecardListView/componentWillReceiveProps, this.props: ' + JSON.stringify(this.props.game));
     //console.log('ScorecardListView/componentWillReceiveProps, nextProps: ' + JSON.stringify(nextProps.game));
-    if (nextProps.game !== this.props.game) {
+    if (nextProps.game.present !== this.props.game.present) {
       //console.log('ScorecardListView/componentsWillReceiveProps **players changed** updating datasource');
       this.setState({
-        dataSource: this.state.dataSource.cloneWithRows(nextProps.game.players),
+        dataSource: this.state.dataSource.cloneWithRows(nextProps.game.present.players),
       });
     }
   }
@@ -151,7 +151,7 @@ export default class ScorecardListView extends React.Component {
       //console.log('ScorecardListView/render, this.state.undercutWinnerId: ' + this.state.undercutWinnerId);
       //console.log('ScorecardListView/render, this.state.undercutLoserId: ' + this.state.undercutLoserId);
       //console.log('ScorecardListView/render, this.props.game: ' + JSON.stringify(this.props.game));
-      const numActive = this.props.game.players.filter((player) => player.active).length;
+      const numActive = this.props.game.present.players.filter((player) => player.active).length;
       //console.log('ScorecardListView/render, numActive: ' + numActive);
       return (
         <View style={{ flex: 1 }}>
@@ -176,7 +176,7 @@ export default class ScorecardListView extends React.Component {
           </View>
           {this.state.isLoadingApp && this._renderLoading()}
             {/* Rest of the app comes ABOVE the action button component !*/}
-            <ActionButton buttonColor="#1abc9c" spacing={15} buttonTextStyle={styles.actionButtonMain} position="left" buttonText={'$' + this.props.game.stakes.toString()}>
+            <ActionButton buttonColor="#1abc9c" spacing={15} buttonTextStyle={styles.actionButtonMain} position="left" buttonText={'$' + this.props.game.present.stakes.toString()}>
 {/*
               <ActionButton.Item buttonColor='#1abc9c' title="Enter Bet" onPress={() => this.props.dispatch(Actions.betIncrease()) }>
                 <TextInput style={styles.btnText} selectTextOnFocus={true}

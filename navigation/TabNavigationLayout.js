@@ -44,17 +44,15 @@ export default class TabNavigationLayout extends React.Component {
           />
         </TabNavigationItem>
 
-{/*
         <TabNavigationItem
-          id="history"
+          id="tricks"
           renderIcon={isSelected =>
-            this._renderIcon('History', 'ios-list-outline', isSelected)}>
+            this._renderIcon('Tricks', 'ios-list-outline', isSelected)}>
           <StackNavigation
             defaultRouteConfig={defaultRouteConfig}
-            initialRoute={Router.getRoute('history')}
+            initialRoute={Router.getRoute('tricks')}
           />
         </TabNavigationItem>
-*/}
 
         <TabNavigationItem
           id="about"

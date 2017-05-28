@@ -1,5 +1,5 @@
 /**
- * @providesModule HistoryScreen
+ * @providesModule TricksScreen
  * @flow
  */
 
@@ -10,8 +10,8 @@ import { connect } from 'react-redux';
 
 import TrickListView from 'TrickListView';
 
-@connect(data => HistoryScreen.getDataProps)
-export default class HistoryScreen extends React.Component {
+@connect(data => TricksScreen.getDataProps)
+export default class TricksScreen extends React.Component {
   static getDataProps(data) {
     return {
       game: data.game,

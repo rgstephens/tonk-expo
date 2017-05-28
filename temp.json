@@ -1,211 +1,234 @@
-{
-  "playerCount": 3,
-  "isLoadingApp": false,
-  "undercutScoring": false,
-  "undercutWinnerId": null,
-  "undercutLoserId": null,
-  "dataSource": {
-    "_dataBlob": {
-      "s1": [
-        {
-          "id": 0,
-          "name": "Greg",
-          "balance": 0,
-          "active": true
-        },
-        {
-          "id": 1,
-          "name": "JM",
-          "balance": 0,
-          "active": true
-        },
-        {
-          "id": 2,
-          "name": "George",
-          "balance": 0,
-          "active": true
-        }
-      ]
-    },
-    "_dirtyRows": [
-      [
-        true,
-        true,
-        true
-      ]
+[
+  {
+    "players": [
+      {
+        "id": 0,
+        "name": "",
+        "balance": 0,
+        "active": true,
+        "won": 0,
+        "lost": 0,
+        "rowchange": 0
+      },
+      {
+        "id": 1,
+        "name": "",
+        "balance": 0,
+        "active": true,
+        "won": 0,
+        "lost": 0,
+        "rowchange": 0
+      },
+      {
+        "id": 2,
+        "name": "",
+        "balance": 0,
+        "active": true,
+        "won": 0,
+        "lost": 0,
+        "rowchange": 0
+      }
     ],
-    "_dirtySections": [
-      true
+    "stakes": 1
+  },
+  {
+    "players": [
+      {
+        "id": 0,
+        "name": "Joe",
+        "balance": -43,
+        "active": true,
+        "won": 33,
+        "lost": 147,
+        "rowchange": 80
+      },
+      {
+        "id": 1,
+        "name": "Bob",
+        "balance": 29,
+        "active": true,
+        "won": 48,
+        "lost": 130,
+        "rowchange": 106
+      },
+      {
+        "id": 2,
+        "name": "Greg",
+        "balance": 21,
+        "active": true,
+        "won": 46,
+        "lost": 133,
+        "rowchange": 111
+      },
+      {
+        "id": 3,
+        "name": "McCormack",
+        "balance": 18,
+        "active": true,
+        "won": 51,
+        "lost": 130,
+        "rowchange": 103
+      },
+      {
+        "id": 4,
+        "name": "George",
+        "balance": -25,
+        "active": true,
+        "won": 3,
+        "lost": 37,
+        "rowchange": 3
+      }
     ],
-    "_cachedRowCount": 3,
-    "rowIdentities": [
-      [
-        "0",
-        "1",
-        "2"
-      ]
+    "stakes": 1
+  },
+  {
+    "players": [
+      {
+        "id": 0,
+        "name": "Joe",
+        "balance": -39,
+        "active": true,
+        "won": 34,
+        "lost": 147,
+        "rowchange": 81
+      },
+      {
+        "id": 1,
+        "name": "Bob",
+        "balance": 28,
+        "active": true,
+        "won": 48,
+        "lost": 131,
+        "rowchange": 106
+      },
+      {
+        "id": 2,
+        "name": "Greg",
+        "balance": 20,
+        "active": true,
+        "won": 46,
+        "lost": 134,
+        "rowchange": 111
+      },
+      {
+        "id": 3,
+        "name": "McCormack",
+        "balance": 17,
+        "active": true,
+        "won": 51,
+        "lost": 131,
+        "rowchange": 103
+      },
+      {
+        "id": 4,
+        "name": "George",
+        "balance": -26,
+        "active": true,
+        "won": 3,
+        "lost": 38,
+        "rowchange": 3
+      }
     ],
-    "sectionIdentities": [
-      "s1"
-    ]
+    "stakes": 1
+  },
+  {
+    "players": [
+      {
+        "id": 0,
+        "name": "Joe",
+        "balance": -39,
+        "active": true,
+        "won": 34,
+        "lost": 147,
+        "rowchange": 81
+      },
+      {
+        "id": 1,
+        "name": "Bob",
+        "balance": 28,
+        "active": true,
+        "won": 48,
+        "lost": 131,
+        "rowchange": 106
+      },
+      {
+        "id": 2,
+        "name": "Greg",
+        "balance": 20,
+        "active": true,
+        "won": 46,
+        "lost": 134,
+        "rowchange": 111
+      },
+      {
+        "id": 3,
+        "name": "M",
+        "balance": 17,
+        "active": true,
+        "won": 51,
+        "lost": 131,
+        "rowchange": 103
+      },
+      {
+        "id": 4,
+        "name": "George",
+        "balance": -26,
+        "active": true,
+        "won": 3,
+        "lost": 38,
+        "rowchange": 3
+      }
+    ],
+    "stakes": 1
+  },
+  {
+    "players": [
+      {
+        "id": 0,
+        "name": "Joe",
+        "balance": -39,
+        "active": true,
+        "won": 34,
+        "lost": 147,
+        "rowchange": 81
+      },
+      {
+        "id": 1,
+        "name": "Bob",
+        "balance": 28,
+        "active": true,
+        "won": 48,
+        "lost": 131,
+        "rowchange": 106
+      },
+      {
+        "id": 2,
+        "name": "Greg",
+        "balance": 20,
+        "active": true,
+        "won": 46,
+        "lost": 134,
+        "rowchange": 111
+      },
+      {
+        "id": 3,
+        "name": "",
+        "balance": 17,
+        "active": true,
+        "won": 51,
+        "lost": 131,
+        "rowchange": 103
+      },
+      {
+        "id": 4,
+        "name": "George",
+        "balance": -26,
+        "active": true,
+        "won": 3,
+        "lost": 38,
+        "rowchange": 3
+      }
+    ],
+    "stakes": 1
   }
-}
-
-{
-  "playerCount": 3,
-  "isLoadingApp": false,
-  "undercutScoring": true,
-  "undercutWinnerId": null,
-  "undercutLoserId": null,
-  "dataSource": {
-    "_dataBlob": {
-      "s1": [
-        {
-          "id": 0,
-          "name": "Greg",
-          "balance": 0,
-          "active": true
-        },
-        {
-          "id": 1,
-          "name": "JM",
-          "balance": 0,
-          "active": true
-        },
-        {
-          "id": 2,
-          "name": "George",
-          "balance": 0,
-          "active": true
-        }
-      ]
-    },
-    "_dirtyRows": [
-      [
-        true,
-        true,
-        true
-      ]
-    ],
-    "_dirtySections": [
-      true
-    ],
-    "_cachedRowCount": 3,
-    "rowIdentities": [
-      [
-        "0",
-        "1",
-        "2"
-      ]
-    ],
-    "sectionIdentities": [
-      "s1"
-    ]
-  }
-}
-
-{
-  "playerCount": 3,
-  "isLoadingApp": false,
-  "undercutScoring": false,
-  "undercutWinnerId": null,
-  "undercutLoserId": null,
-  "dataSource": {
-    "_dataBlob": {
-      "s1": [
-        {
-          "id": 0,
-          "name": "Greg",
-          "balance": -1,
-          "active": true
-        },
-        {
-          "id": 1,
-          "name": "JM",
-          "balance": -1,
-          "active": true
-        },
-        {
-          "id": 2,
-          "name": "George",
-          "balance": 2,
-          "active": true
-        }
-      ]
-    },
-    "_dirtyRows": [
-      [
-        true,
-        true,
-        true
-      ]
-    ],
-    "_dirtySections": [
-      false
-    ],
-    "_cachedRowCount": 3,
-    "rowIdentities": [
-      [
-        "0",
-        "1",
-        "2"
-      ]
-    ],
-    "sectionIdentities": [
-      "s1"
-    ]
-  }
-}
-
-{
-  "playerCount": 3,
-  "isLoadingApp": false,
-  "undercutScoring": true,
-  "undercutWinnerId": null,
-  "undercutLoserId": null,
-  "dataSource": {
-    "_dataBlob": {
-      "s1": [
-        {
-          "id": 0,
-          "name": "Greg",
-          "balance": -1,
-          "active": true
-        },
-        {
-          "id": 1,
-          "name": "JM",
-          "balance": -1,
-          "active": true
-        },
-        {
-          "id": 2,
-          "name": "George",
-          "balance": 2,
-          "active": true
-        }
-      ]
-    },
-    "_dirtyRows": [
-      [
-        true,
-        true,
-        true
-      ]
-    ],
-    "_dirtySections": [
-      false
-    ],
-    "_cachedRowCount": 3,
-    "rowIdentities": [
-      [
-        "0",
-        "1",
-        "2"
-      ]
-    ],
-    "sectionIdentities": [
-      "s1"
-    ]
-  }
-}
+]
