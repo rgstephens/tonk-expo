@@ -52,6 +52,7 @@ async function clearHistoryAsync() {
 
 async function getGameAsync() {
   let results = await AsyncStorage.getItem(Keys.Game);
+  //debugger;
   //console.log('LocalStorage/getGameAsync: ' + results);
 
   try {

@@ -83,13 +83,14 @@ export default class TrickListView extends React.Component {
     if (nextProps.game.past !== this.props.game.past) {
       const playerNames = nextProps.game.past.length > 0 ? nextProps.game.past[nextProps.game.past.length-1].players.map(function(p) {return p.name;}) : []
       console.log('TrickListView/constructor playerNames: ' + playerNames);
+      //debugger;
 
       this.setState({
         maxPlayers: nextProps.game.past[nextProps.game.past.length-1].players.length,
         playerNames: playerNames,
         //present: nextProps.game.present,
         //trickCount: nextProps.game.past.length,
-        dataSource: this.state.dataSource.cloneWithRows([...nextProps.game.past, props.game.present]),
+        dataSource: this.state.dataSource.cloneWithRows([...nextProps.game.past, nextProps.game.present]),
       });
     }
   }

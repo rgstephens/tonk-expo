@@ -60,7 +60,11 @@ export default class AboutScreen extends React.Component {
         </RegularText>
 
         <RegularText style={styles.text}>
-          It is written in Javascript and React Native. The source code is available on GitHub.
+          It is written in Javascript and React Native. The source code is available on
+          {' '}
+          <RegularText style={styles.text} onPress={this.openGitHub} style={styles.linkText}>
+            GitHub.
+          </RegularText>
         </RegularText>
 
         <BoldText style={styles.title}>
@@ -74,7 +78,7 @@ export default class AboutScreen extends React.Component {
           Version
         </BoldText>
         <RegularText style={styles.text}>
-          0.3
+          0.4
         </RegularText>
 
         <BoldText style={styles.title}>
@@ -102,6 +106,10 @@ export default class AboutScreen extends React.Component {
 
   _openTonkWiki = () => {
     Linking.openURL('https://en.wikipedia.org/wiki/Tonk_(card_game)');
+  };
+
+  openGitHub = () => {
+    Linking.openURL('https://github.com/rgstephens/tonk-expo');
   };
 }
 

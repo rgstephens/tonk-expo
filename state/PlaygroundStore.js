@@ -24,7 +24,7 @@ export default createStore(
     history: HistoryReducer,
     game: undoable(GameReducer, { limit: 100, filter: function filterActions(action, currentState, previousHistory) {
       if (action.type == "WON" || action.type == "UNDERCUT") {
-        console.log('>True');
+        //console.log('>True');
         let { past, present, future } = previousHistory;
         console.log('PlaygroundStore/undoable, action: ' + JSON.stringify(action.type) + ', present: ' + JSON.stringify(present));
         //console.log('PlaygroundStore/undoable, future: ' + JSON.stringify(future));

@@ -1,8 +1,8 @@
 {
-  "expoServerPort": 19004,
-  "packagerPort": 19005,
-  "packagerPid": 69761,
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 1099,
   "expoServerNgrokUrl": "https://hf-aep.stephens.rnplay.exp.direct",
   "packagerNgrokUrl": "https://packager.hf-aep.stephens.rnplay.exp.direct",
-  "ngrokPid": 69775
+  "ngrokPid": 1116
 }
